@@ -1,0 +1,25 @@
+body {
+    background-color: rgba(247, 227, 244, 0.904);
+}
+td {
+    font-family: "Courier New", 'Courier New', Courier, monospace;
+
+}
+
+td:first-child {
+    background-color: rgb(149, 106, 189);
+}
+
+#customtd {
+    color: rgb(223, 100, 110);
+}
+
+.fila {
+    border: 2px solid purple;
+    text-align: center;
+}
+
+.fila:hover {
+    background-color: red;
+    cursor: wait;
+}

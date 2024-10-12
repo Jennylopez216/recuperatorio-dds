@@ -3,13 +3,13 @@ const express = require("express");
 //importa la libreria EXPRESS y la asigna a una variable llamada express
 const app = express();
 
+require("./base-orm/sqlite-init");  // crear base si no existe
+
 //Permite que express procese cuerpos de solicitud en formato Json
 app.use(express.json()); //esto es necesario para leer los datos JSON en las solicitudes
 
 //importa el archivo de rutas 
 const articulosfamiliasmockRouter = require("./routes/articulosfamiliasmock");
-app.use(articulosfamiliasmockRouter);
-
 //usar el router de rutas en la aplicacion
 app.use(articulosfamiliasmockRouter); //Este método vincula el router que importaste a la aplicación Express. Esto permite que todas las rutas definidas en el archivo articulosfamiliasmock.js estén disponibles en la aplicación.
 

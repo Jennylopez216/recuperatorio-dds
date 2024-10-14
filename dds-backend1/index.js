@@ -20,6 +20,10 @@ app.get("/", (req, res) => {
   res.send("Backend inicial dds-backend!");
 });
 
+//
+const articulosfamiliasRouter = require("./routes/articulosfamilias");
+app.use(articulosfamiliasRouter); //permit que la aplicacion gestione las solicutudes a esas rutas
+
 // levantar servidor
 const port = 3000; //numero de puerto en el que tu servidor web estara escuchando conexiones
 app.listen(port, () => {//inicializa el servidor
